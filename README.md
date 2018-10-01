@@ -1,2 +1,3 @@
-# lighthouselabs-coding-challenge
-Lighthouse Labs 21-day coding challenge 2018
+# Lighthouse Labs 21-Day Coding Challenge 2018
+
+https://coding-challenge.lighthouselabs.ca/start
