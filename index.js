@@ -38,11 +38,18 @@ const GRID = [
   ["", "^", "", "", "~", "~", "", "", "", ""],
 ];
 
-/*
-  Challenge #1
-  
-  Write a function called countRows() which will tell us the number of rows in our GRID.
-  Remember that other lighthouse operators are going to be using this function,
-  so it has to be able to work on a GRID of any size.
-*/
-const countRows = () => { return GRID.length }
+/**
+ * Challenge #1
+ * 
+ * Write a function called countRows() which will tell us the number of rows in our GRID.
+ * Remember that other lighthouse operators are going to be using this function,
+ * so it has to be able to work on a GRID of any size.
+  */
+const countRows = () => { return GRID.length };
+
+/**
+ * Challenge #2
+ * 
+ * Write a function called countColumns() that will tell us the number of columns in our GRID.
+ */
+const countColumns = () => { return GRID[0].length };
