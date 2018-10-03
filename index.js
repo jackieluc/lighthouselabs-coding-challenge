@@ -53,3 +53,12 @@ const countRows = () => { return GRID.length };
  * Write a function called countColumns() that will tell us the number of columns in our GRID.
  */
 const countColumns = () => { return GRID[0].length };
+
+/**
+ * Challenge #3
+ * 
+ * Write a function called gridSize() that will tell you the size of your grid in the format width x height.
+ * Your function should return a string, and in this example, your function should return the string '10 x 10'.
+ */
+
+const gridSize = () => { return `${countColumns()} x ${countRows()}` };
