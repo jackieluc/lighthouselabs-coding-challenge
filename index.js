@@ -62,3 +62,11 @@ const countColumns = () => { return GRID[0].length };
  */
 
 const gridSize = () => { return `${countColumns()} x ${countRows()}` };
+
+/**
+ * Challenge #4
+ * 
+ * Write a new function called totalCells() which will return the total number of cells in your grid.
+ */
+
+const totalCells = () => { return countColumns() * countRows(); };
