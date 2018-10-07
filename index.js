@@ -115,6 +115,7 @@ const convertColumn = (coordinate) => {
  */
 
 const lightCell = (coordinate) => {
+
     const rowIndex = coordinate.charAt(1) - 1;
     const columnIndex = convertColumn(coordinate);
     
