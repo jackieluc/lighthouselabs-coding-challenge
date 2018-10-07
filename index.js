@@ -1,6 +1,4 @@
 /*
-  GRID
-
       A   B   C   D   E   F   G   H   I   J
     +---+---+---+---+---+---+---+---+---+---+
 1  |   |   |   | ^ |   |   |   |   |   |   |
@@ -39,13 +37,17 @@ const GRID = [
 ];
 
 /**
- * Helper functions
+ * Constants
  */
 const COLUMN_CHAR_START = 'A'.charCodeAt(0);
+const ROCK = '^';
 
+/**
+ * Helper functions
+ */
 const charToIndex = (char) => {
 	return char.toUpperCase().charCodeAt(0) - COLUMN_CHAR_START;
-}
+};
 
 const getIndices = (coordinate) => {
 	const column = coordinate.charAt(0);
@@ -54,8 +56,8 @@ const getIndices = (coordinate) => {
 	return {
 		columnIndex: charToIndex(column),
 		rowIndex: row - 1
-	}
-}
+	};
+};
 
 /**
  * Challenge functions
@@ -87,4 +89,8 @@ const lightCell = (coordinate) => {
 	const { rowIndex, columnIndex } = getIndices(coordinate);
     
 	return GRID[rowIndex][columnIndex];
+};
+
+const isRock = (coordinate) => {
+  return lightCell(coordinate) === ROCK;
 };
