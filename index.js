@@ -38,6 +38,29 @@ const GRID = [
   ["", "^", "", "", "~", "~", "", "", "", ""],
 ];
 
+/**
+ * Helper functions
+ */
+const COLUMN_CHAR_START = 'A'.charCodeAt(0);
+
+const charToIndex = (char) => {
+	return char.toUpperCase().charCodeAt(0) - COLUMN_CHAR_START;
+}
+
+const getIndices = (coordinate) => {
+	const column = coordinate.charAt(0);
+	const row = coordinate.charAt(1);
+
+	return {
+		columnIndex: charToIndex(column),
+		rowIndex: row - 1
+	}
+}
+
+/**
+ * Challenge functions
+ */
+
 const countRows = () => {
 	return GRID.length;
 };
@@ -55,18 +78,13 @@ const totalCells = () => {
 };
 
 const convertColumn = (coordinate) => {
-
-	const columnCode = coordinate.charAt(0).toUpperCase().charCodeAt(0);
-	const baseColumnCode = 'A'.charCodeAt(0);
-	const columnIndex = columnCode - baseColumnCode; 
+	const { columnIndex } = getIndices(coordinate);
 
 	return columnIndex;
 };
 
 const lightCell = (coordinate) => {
-
-	const rowIndex = coordinate.charAt(1) - 1;
-	const columnIndex = convertColumn(coordinate);
+	const { rowIndex, columnIndex } = getIndices(coordinate);
     
 	return GRID[rowIndex][columnIndex];
 };
