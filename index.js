@@ -42,6 +42,7 @@ const GRID = [
 const COLUMN_CHAR_START = 'A'.charCodeAt(0);
 const ROCK = '^';
 const CURRENT = '~';
+const SHIP = 'v';
 
 /**
  * Helper functions
@@ -98,4 +99,8 @@ const isRock = (coordinate) => {
 
 const isCurrent = (coordinate) => {
   return lightCell(coordinate) === CURRENT;
+};
+
+const isShip = (coordinate) => {
+  return lightCell(coordinate) === SHIP;
 };
