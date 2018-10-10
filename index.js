@@ -104,3 +104,7 @@ const isCurrent = (coordinate) => {
 const isShip = (coordinate) => {
   return lightCell(coordinate) === SHIP;
 };
+
+const lightRow = (index) => {
+  return GRID[index - 1];
+};
