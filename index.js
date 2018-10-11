@@ -105,8 +105,8 @@ const isShip = (coordinate) => {
   return lightCell(coordinate) === SHIP;
 };
 
-const lightRow = (rowIndex) => {
-  return GRID[rowIndex - 1];
+const lightRow = (rowNumber) => {
+  return GRID[rowNumber - 1];
 };
 
 const lightColumn = (columnLetter) => {
