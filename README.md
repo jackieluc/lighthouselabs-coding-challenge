@@ -72,3 +72,7 @@ Your next job is to write a function so that your lighthouse can sweep a whole r
   
 Write a function named lightRow() that takes in the number of the row and returns its contents. (Example: lightRow(2); would return ["", "", "v", "", "~", "", "", "", "", ""])
 
+## Challenge 11
+Now that you can return the contents of the cells of a row, we also need to be able to return the cells of a column.
+  
+Write a function called lightColumn() that takes in the letter of the column from the grid, and returns an array that is the contents of that grid column. (Ex: lightColumn('C'); would return ["", "", "", "", "", "", "", "~", "", ""])
