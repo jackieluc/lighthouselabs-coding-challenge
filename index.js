@@ -52,8 +52,8 @@ const letterToIndex = (letter) => {
 };
 
 const getIndices = (coordinate) => {
-	const columnLetter = coordinate.charAt(0);
-	const rowNumber = coordinate.charAt(1);
+	const columnLetter = coordinate.slice(0,1);
+	const rowNumber = coordinate.slice(1);
 
 	return {
 		columnIndex: letterToIndex(columnLetter),
