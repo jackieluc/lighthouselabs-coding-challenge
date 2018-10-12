@@ -47,17 +47,17 @@ const SHIP = 'v';
 /**
  * Helper functions
  */
-const charToIndex = (char) => {
-	return char.toUpperCase().charCodeAt(0) - COLUMN_CHAR_START;
+const letterToIndex = (letter) => {
+	return letter.toUpperCase().charCodeAt(0) - COLUMN_CHAR_START;
 };
 
 const getIndices = (coordinate) => {
-	const column = coordinate.charAt(0);
-	const row = coordinate.charAt(1);
+	const columnLetter = coordinate.charAt(0);
+	const rowNumber = coordinate.charAt(1);
 
 	return {
-		columnIndex: charToIndex(column),
-		rowIndex: row - 1
+		columnIndex: letterToIndex(columnLetter),
+		rowIndex: rowNumber - 1
 	};
 };
 
@@ -107,7 +107,7 @@ const isShip = (coordinate) => {
 
 const lightRow = (rowNumber) => {
 	const row = GRID[rowNumber - 1];
-	
+
   return row;
 };
 
@@ -117,3 +117,4 @@ const lightColumn = (columnLetter) => {
   
 	return column;
 };
+
