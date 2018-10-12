@@ -89,6 +89,9 @@ const convertColumn = (coordinate) => {
 
 const lightCell = (coordinate) => {
 	const { rowIndex, columnIndex } = getIndices(coordinate);
+
+	if (rowIndex < 0 || rowIndex >= countRows()) return false;
+	if (columnIndex < 0 || columnIndex >= countColumns()) return false;
     
 	return GRID[rowIndex][columnIndex];
 };

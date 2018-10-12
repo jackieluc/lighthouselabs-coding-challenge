@@ -76,3 +76,6 @@ Write a function named lightRow() that takes in the number of the row and return
 Now that you can return the contents of the cells of a row, we also need to be able to return the cells of a column.
   
 Write a function called lightColumn() that takes in the letter of the column from the grid, and returns an array that is the contents of that grid column. (Ex: lightColumn('C'); would return ["", "", "", "", "", "", "", "~", "", ""])
+
+## Challenge 12
+The weekend lighthouse operator isn't as smart as you are, and sometimes tells the Lighthouse9000™ system to do invalid things, causing the repairman to have to come out and fix the lighthouse. Upgrade the lightCell() method so that if an invalid cell is passed in, it returns false. (Example: lightCell('Z3'); would return false as would lightCell('A11');)
