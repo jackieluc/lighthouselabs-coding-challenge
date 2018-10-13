@@ -51,6 +51,12 @@ const letterToIndex = (letter) => {
 	return letter.toUpperCase().charCodeAt(0) - COLUMN_CHAR_START;
 };
 
+const indexToLetter = (columnIndex) => {
+  const letterCode = columnIndex + COLUMN_CHAR_START;
+  
+  return String.fromCharCode(letterCode);
+};
+
 const getIndices = (coordinate) => {
 	const columnLetter = coordinate.slice(0,1);
 	const rowNumber = coordinate.slice(1);
@@ -59,6 +65,21 @@ const getIndices = (coordinate) => {
 		columnIndex: letterToIndex(columnLetter),
 		rowIndex: rowNumber - 1
 	};
+};
+
+const getCoordinate = (columnIndex, rowIndex) => {
+  const columnLetter = indexToLetter(columnIndex);
+  const rowNumber = rowIndex + 1;
+  
+  return `${columnLetter}${rowNumber}`;
+};
+
+const environmentGrid = (row, rowIndex, isEnvironment) => {
+  return row.map((column, columnIndex) => {
+    const coordinate = getCoordinate(columnIndex, rowIndex);
+    
+    return isEnvironment(coordinate) ? coordinate : null;
+  });
 };
 
 /**
@@ -121,3 +142,39 @@ const lightColumn = (columnLetter) => {
 	return column;
 };
 
+/** 
+const allRocks = () => {
+  return GRID
+    .map((row, rowIndex) => environmentGrid(row, rowIndex, isRock))
+    .flat()
+    .filter(coordinate => typeof(coordinate) === 'string');
+};
+  
+const allCurrents = () => {
+  return GRID
+    .map((row, rowIndex) => environmentGrid(row, rowIndex, isCurrent))
+    .flat()
+    .filter(coordinate => typeof(coordinate) === 'string');
+};
+
+ */
+
+const allRocks = () => {
+  const environment = GRID.map((row, rowIndex) => 
+    environmentGrid(row, rowIndex, isRock)
+  );
+  
+  return []
+    .concat(...environment)
+    .filter(coordinate => typeof(coordinate) === 'string');
+};
+  
+const allCurrents = () => {
+  const environment = GRID.map((row, rowIndex) => 
+    environmentGrid(row, rowIndex, isCurrent)
+  );
+  
+  return []
+    .concat(...environment)
+    .filter(coordinate => typeof(coordinate) === 'string');
+};
