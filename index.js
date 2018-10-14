@@ -148,40 +148,27 @@ const lightColumn = (columnLetter) => {
 	return column;
 };
 
-/** 
-const allRocks = () => {
+/**
   return GRID
-    .map((row, rowIndex) => environmentGrid(row, rowIndex, isRock))
-    .flat()
-    .filter(coordinate => typeof(coordinate) === 'string');
-};
-  
-const allCurrents = () => {
-  return GRID
-    .map((row, rowIndex) => environmentGrid(row, rowIndex, isCurrent))
-    .flat()
-    .filter(coordinate => typeof(coordinate) === 'string');
-};
- */
+  .map((row, rowIndex) => environmentGrid(row, rowIndex, environmentFunction))
+  .flat()
+  .filter(coordinate => typeof(coordinate) === 'string');
+*/
 
 const allRocks = () => {
-  const environment = GRID.map((row, rowIndex) => 
+  const rocksGrid = GRID.map((row, rowIndex) =>
     environmentGrid(row, rowIndex, isRock)
   );
   
-  return []
-    .concat(...environment)
-    .filter(coordinate => typeof(coordinate) === 'string');
+  return getCoordinates(rocksGrid);
 };
   
 const allCurrents = () => {
-  const environment = GRID.map((row, rowIndex) => 
+  const currentsGrid = GRID.map((row, rowIndex) =>
     environmentGrid(row, rowIndex, isCurrent)
   );
   
-  return []
-    .concat(...environment)
-    .filter(coordinate => typeof(coordinate) === 'string');
+  return getCoordinates(currentsGrid);
 };
 
 const allShips = () => {
