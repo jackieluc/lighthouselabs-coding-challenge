@@ -82,6 +82,12 @@ const environmentGrid = (row, rowIndex, isEnvironment) => {
   });
 };
 
+const getCoordinates = (grid) => {
+  return []
+    .concat(...grid)
+    .filter(coordinate => typeof(coordinate) === 'string');
+};
+
 /**
  * Challenge functions
  */
@@ -156,7 +162,6 @@ const allCurrents = () => {
     .flat()
     .filter(coordinate => typeof(coordinate) === 'string');
 };
-
  */
 
 const allRocks = () => {
@@ -177,4 +182,12 @@ const allCurrents = () => {
   return []
     .concat(...environment)
     .filter(coordinate => typeof(coordinate) === 'string');
+};
+
+const allShips = () => {
+  const shipsGrid = GRID.map((row, rowIndex) => 
+    environmentGrid(row, rowIndex, isShip)
+  );
+  
+  return getCoordinates(shipsGrid);
 };
