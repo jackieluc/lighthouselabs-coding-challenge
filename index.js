@@ -178,3 +178,9 @@ const allShips = () => {
   
   return getCoordinates(shipsGrid);
 };
+
+const firstRock = () => {
+  const [ firstCoordinate ] = allRocks();
+  
+  return firstCoordinate;
+};

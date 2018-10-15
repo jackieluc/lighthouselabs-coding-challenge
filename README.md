@@ -91,3 +91,6 @@ Write a function called allCurrents() which, when called, will return an array o
 While we are reporting on things, let's make a report for all of the ships in our area. This one is for Transport Canada, as they are the ones watching all the movements of ships.
   
 Write a function called allShips() which, when called, will return an array of the coordinates of all the ships in your grid.
+
+## Challenge 15
+Here is an opportunity to prove how powerful your Lighthouse-powering skills are! Write a function called firstRock() which will return the coordinates of the first rock in your grid. Consider how you might use one of your previously written functions to simplify your task!
