@@ -184,3 +184,9 @@ const firstRock = () => {
   
   return firstCoordinate;
 };
+
+const firstCurrent = () => {
+  const [ firstCoordinate ] = allCurrents();
+  
+  return firstCoordinate;
+};
