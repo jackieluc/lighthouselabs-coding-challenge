@@ -190,3 +190,12 @@ const firstCurrent = () => {
   
   return firstCoordinate;
 };
+
+const shipReport = () => {
+  const [ firstShip, ...ships ] = allShips().sort( (a,b) =>
+    a.charCodeAt(0) - b.charCodeAt(0)
+  );
+  const lastShip = ships.pop();
+  
+  return [ firstShip, lastShip ];
+};
