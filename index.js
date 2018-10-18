@@ -193,7 +193,7 @@ const firstCurrent = () => {
 
 const shipReport = () => {
   const [ firstShip, ...ships ] = allShips().sort( (a,b) =>
-    a.charCodeAt(0) - b.charCodeAt(0)
+    convertColumn(a) - convertColumn(b)
   );
   const lastShip = ships.pop();
   
