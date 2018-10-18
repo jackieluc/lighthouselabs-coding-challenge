@@ -102,3 +102,8 @@ That was outstanding! Now do the same thing with firstCurrent(). Don't reinvent 
 Transport Canada called back. They want something similar to what you did for firstRock() and firstCurrent() but they want both the first AND the last ship in your area.
   
 Write a function called shipReport() which does not take any parameters, but will return an array of the coordinates of the ship furthest to the west (left) and east (right) of your GRID. (Example: shipReport() would return ['B3', 'J10'].)
+
+## Challenge 18
+Ship captains are really starting to rely on you to plot their routes through your area. Your name is being sung in pubs and taverns up and down the coast. And this time, it's for the right reasons! The ship captains are starting to be curious about some of the cells in your grid, and what they want is to know how dangerous a particular cell is. They know if ones are safe, but sometimes, they are willing to accept a bit of danger so that they can get a faster delivery time.
+  
+A cell is considered dangerous if there is a rock or a strong current in it. However, a cell with rocks in it would be 100% dangerous, while strong currents are only 50% dangerous. Write a function called howDangerous() that will take a cell in the format 'G7' and return a number value for how dangerous the cell is. (Example: howDangerous('E2') will return 50 where howDangerous('E3') will return 100.)

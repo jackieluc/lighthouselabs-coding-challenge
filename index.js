@@ -199,3 +199,11 @@ const shipReport = () => {
   
   return [ firstShip, lastShip ];
 };
+
+const howDangerous = (coordinate) => {
+  if (isRock(coordinate)) 
+    return 100;
+    
+  if (isCurrent(coordinate))
+    return 50;
+};
