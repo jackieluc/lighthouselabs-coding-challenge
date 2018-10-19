@@ -88,6 +88,10 @@ const getCoordinates = (grid) => {
     .filter(coordinate => typeof(coordinate) === 'string');
 };
 
+const getPercentageReport = (numberOfItems) => {
+  return parseFloat((numberOfItems / totalCells()) * 100).toFixed(2);
+};
+
 /**
  * Challenge functions
  */
@@ -206,4 +210,14 @@ const howDangerous = (coordinate) => {
     
   if (isCurrent(coordinate))
     return 50;
+};
+
+const percentageReport = () => {
+  const numberOfRocks = allRocks().length;
+  const numberOfCurrents = allCurrents().length;
+  
+  const rocksPercentage = getPercentageReport(numberOfRocks);
+  const currentsPercentage = getPercentageReport(numberOfCurrents);
+  
+  return [ rocksPercentage, currentsPercentage ];
 };
