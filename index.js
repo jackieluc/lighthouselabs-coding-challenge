@@ -82,7 +82,7 @@ const environmentGrid = (row, rowIndex, isEnvironment) => {
   });
 };
 
-const getCoordinates = (grid) => {
+const getCoordinatesList = (grid) => {
   return []
     .concat(...grid)
     .filter(coordinate => typeof(coordinate) === 'string');
@@ -164,7 +164,7 @@ const allRocks = () => {
     environmentGrid(row, rowIndex, isRock)
   );
   
-  return getCoordinates(rocksGrid);
+  return getCoordinatesList(rocksGrid);
 };
   
 const allCurrents = () => {
@@ -172,7 +172,7 @@ const allCurrents = () => {
     environmentGrid(row, rowIndex, isCurrent)
   );
   
-  return getCoordinates(currentsGrid);
+  return getCoordinatesList(currentsGrid);
 };
 
 const allShips = () => {
@@ -180,7 +180,7 @@ const allShips = () => {
     environmentGrid(row, rowIndex, isShip)
   );
   
-  return getCoordinates(shipsGrid);
+  return getCoordinatesList(shipsGrid);
 };
 
 const firstRock = () => {
