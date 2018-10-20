@@ -221,3 +221,11 @@ const percentageReport = () => {
   
   return [ rocksPercentage, currentsPercentage ];
 };
+
+const safetyReport = () => {
+  return GRID.map((row, rowIndex) => {
+    return row.map((column, columnIndex) => {
+      return howDangerous(getCoordinate(columnIndex, rowIndex));
+    });
+  });
+};
