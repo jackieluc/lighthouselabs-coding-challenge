@@ -115,3 +115,8 @@ Write a function percentageReport() that returns the right percentages. (Example
 
 ## Challenge 20
 Lighthouse HQ also wants a report of the safety of your GRID. Write another function called `safetyReport()` which will return your GRID with all of the values replaced by the percentage for how dangerous they are. The percentages for how dangerous a cell is were established in question #18.
+
+## Challenge 21
+Ship captains have heard of your prowess and want to know the length of their routes through your grid.
+  
+Write a function called calcDistance() which will take two coordinates in the form of 'A3' and calculate the distance between the two points.

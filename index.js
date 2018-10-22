@@ -78,7 +78,7 @@ const environmentGrid = (row, rowIndex, isEnvironment) => {
   return row.map((column, columnIndex) => {
     const coordinate = getCoordinate(columnIndex, rowIndex);
     
-    return isEnvironment(coordinate) ? coordinate : null;
+    return isEnvironment(coordinate) ? coordinate : '';
   });
 };
 
@@ -228,4 +228,16 @@ const safetyReport = () => {
       return howDangerous(getCoordinate(columnIndex, rowIndex));
     });
   });
+};
+
+const calcDistance = (coordinate1, coordinate2) => {
+  const coordinate1Indices = getIndices(coordinate1);
+  const coordinate2Indices = getIndices(coordinate2);
+  
+  const distance = Math.sqrt(
+    Math.pow(coordinate2Indices.rowIndex - coordinate1Indices.rowIndex, 2)
+    + Math.pow(coordinate2Indices.columnIndex - coordinate1Indices.columnIndex, 2)
+  );
+  
+  return distance.toFixed(2);
 };
