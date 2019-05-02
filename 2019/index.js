@@ -31,3 +31,8 @@ const radio = {
 function powerOn() {
   ship.powerOn = true;
 }
+
+// Challenge #2
+function countModules() {
+  return availableModules.length;
+}
