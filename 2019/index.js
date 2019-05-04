@@ -36,3 +36,8 @@ function powerOn() {
 function countModules() {
   return availableModules.length;
 }
+
+// Challenge #3
+function countEssential() {
+  return availableModules.filter(module => module.essential === true).length;
+}
