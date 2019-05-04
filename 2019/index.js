@@ -33,6 +33,15 @@ function powerOn() {
 }
 
 // Challenge #2
+/**
+ * Module in `availableModules` schema
+ * 
+ * module = {
+ *  name: string,
+ *  size: integer,
+ *  enabled: boolean
+ * }
+ */
 function countModules() {
   return availableModules.length;
 }
@@ -41,3 +50,21 @@ function countModules() {
 function countEssential() {
   return availableModules.filter(module => module.essential === true).length;
 }
+
+// Challenge #4
+
+// helper
+function loadLifeSupport() {
+  availableModules.forEach((module, index) => {
+    if (module.name === 'life-support') {
+      loadModule(index);
+    }
+  })
+}
+
+function loadModule(index) {
+  availableModules[index].enabled = true;
+  ship.modules.push(availableModules[index]);
+}
+
+loadLifeSupport();
