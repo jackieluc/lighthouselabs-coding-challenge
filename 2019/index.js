@@ -4,9 +4,9 @@
 
 const navigation = {
   x: -2,
-  y: "Banana",
-  z: "Beep",
-  speed: "raaaaid"
+  y: 'Banana',
+  z: 'Beep',
+  speed: 'raaaaid'
 };
 
 const ship = {
@@ -18,8 +18,8 @@ const ship = {
 };
 
 const radio = {
-  frequency: "Kenneth",
-  message: "Bugs are cool.",
+  frequency: 'Kenneth',
+  message: 'Bugs are cool.',
   beacon: false
 };
 
@@ -35,7 +35,7 @@ function powerOn() {
 // Challenge #2
 /**
  * Module in `availableModules` schema
- * 
+ *
  * module = {
  *  name: string,
  *  size: integer,
@@ -59,7 +59,7 @@ function loadLifeSupport() {
     if (module.name === 'life-support') {
       loadModule(index);
     }
-  })
+  });
 }
 
 function loadModule(index) {
@@ -68,3 +68,16 @@ function loadModule(index) {
 }
 
 loadLifeSupport();
+
+// Challenge #5
+function findModuleIndex(moduleName) {
+  return availableModules.findIndex(module => module.name === moduleName);
+}
+
+// Challenge 5 helper
+function loadPropulsion() {
+  const index = findModuleIndex('propulsion');
+  loadModule(index);
+}
+
+loadPropulsion();

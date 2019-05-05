@@ -33,7 +33,8 @@ Start off by finding out how many modules there are. Make a method called `count
 
 Use your JavaScript skills to write a function called `countEssential()` which will count how many modules from the `availableModules` array have the `essential` flag set.
 
-Challenge #4
+## Challenge #4
+
 "DANGER QUACK DANGER QUACK!"
 
 LARRY seemed so happy before, but he really is starting to get a bit agitated. Now that you know there are three essential modules, maybe you should start loading them into the ship's systems.
@@ -41,9 +42,17 @@ LARRY seemed so happy before, but he really is starting to get a bit agitated. N
 Write a function called `loadModule()`. It needs to take a parameter, called `index`. Your function should be set up like this:
 
 ```javascript
-function loadModule(index) { }
+function loadModule(index) {}
 ```
 
 When `loadModule` gets the index number of a module, it should load it into the ship's `modules` property (which is already an array). Before you load it in, set the `enabled` property to `true`. You need to loop over the `availableModules` and find the module called "life-support" and get its index, then use it to call `loadModule()`.
 
 **Hint:** You need to either loop through `availableModules` outside of any function or write a seperate function that handles the looping make sure it is **called** in your code"
+
+## Challenge #5
+
+"BREATHE EASIER!" LARRY quacks out. "LITERALLY. Life support module loaded. Propulsion needed."
+
+You can re-use your code from before, but this time you should do what all good programmers do: modularize your code. Write a function called `findModuleIndex()` which will take in a name that you’re looking for, and return the index of that module in the `availableModules` array. Remember: it has to have the `essential` flag, too!
+
+Use your `findModuleIndex` function to find the "propulsion" module and then load it into the ship's system.
