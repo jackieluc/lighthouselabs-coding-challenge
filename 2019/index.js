@@ -52,32 +52,22 @@ function countEssential() {
 }
 
 // Challenge #4
-
-// helper
-function loadLifeSupport() {
-  availableModules.forEach((module, index) => {
-    if (module.name === 'life-support') {
-      loadModule(index);
-    }
-  });
-}
-
 function loadModule(index) {
   availableModules[index].enabled = true;
   ship.modules.push(availableModules[index]);
 }
-
-loadLifeSupport();
 
 // Challenge #5
 function findModuleIndex(moduleName) {
   return availableModules.findIndex(module => module.name === moduleName);
 }
 
-// Challenge 5 helper
-function loadPropulsion() {
-  const index = findModuleIndex('propulsion');
+// Challenge #6
+function loadModuleByName(moduleName) {
+  const index = findModuleIndex(moduleName);
   loadModule(index);
 }
 
-loadPropulsion();
+loadModuleByName('life-support'); // Challenge #4
+loadModuleByName('propulsion'); // Challenge #5
+loadModuleByName('navigation'); // Challenge #6
