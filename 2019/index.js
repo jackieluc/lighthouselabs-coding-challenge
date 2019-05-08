@@ -71,3 +71,12 @@ function loadModuleByName(moduleName) {
 loadModuleByName('life-support'); // Challenge #4
 loadModuleByName('propulsion'); // Challenge #5
 loadModuleByName('navigation'); // Challenge #6
+
+// Challenge #7
+function resetLARRY() {
+  for (let i = 0; i < 10; i++) {
+    LARRY.quack();
+  }
+}
+
+resetLARRY();
