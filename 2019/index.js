@@ -80,3 +80,6 @@ function resetLARRY() {
 }
 
 resetLARRY();
+
+// Challenge #8
+loadModuleByName('communication');
