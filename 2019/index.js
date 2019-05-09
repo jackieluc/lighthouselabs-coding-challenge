@@ -83,3 +83,10 @@ resetLARRY();
 
 // Challenge #8
 loadModuleByName('communication');
+
+// Challenge #9
+function setMessage() {
+  radio.message = JSON.stringify(navigation);
+}
+
+setMessage();
