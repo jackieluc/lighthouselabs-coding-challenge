@@ -95,3 +95,8 @@ setMessage();
 function activateBeacon() {
   radio.beacon = true;
 }
+
+// Challenge #11
+function setFrequency() {
+  radio.frequency = (radio.range.low + radio.range.high) / 2;
+}
