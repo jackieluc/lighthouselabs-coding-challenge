@@ -90,3 +90,8 @@ function setMessage() {
 }
 
 setMessage();
+
+// Challenge #10
+function activateBeacon() {
+  radio.beacon = true;
+}
