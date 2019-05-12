@@ -100,3 +100,12 @@ function activateBeacon() {
 function setFrequency() {
   radio.frequency = (radio.range.low + radio.range.high) / 2;
 }
+
+// Challenge #12
+function initialize() {
+  navigation = {
+    x: 0,
+    y: 0,
+    z: 0
+  };
+}
