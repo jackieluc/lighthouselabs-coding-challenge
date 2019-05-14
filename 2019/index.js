@@ -122,3 +122,29 @@ function calibrateX() {
 }
 
 calibrateX();
+
+// Challenge #14
+function calibrateY() {
+  for (let i = 0; i < 60; i++) {
+  const signal = checkSignal();
+  
+  if (signal !== undefined) {
+    navigation.y = signal;
+    break;
+  }
+}
+}
+
+function calibrateZ() {
+for (let i = 0; i < 60; i++) {
+  const signal = checkSignal();
+  
+  if (signal !== undefined) {
+    navigation.z = signal;
+    break;
+  }
+}
+}
+
+calibrateY();
+calibrateZ();
