@@ -109,3 +109,16 @@ function initialize() {
     z: 0
   };
 }
+
+// Challenge #13
+function calibrateX() {
+  for (let i = 0; i < 12; i++) {
+    const signal = checkSignal();
+    if (signal !== undefined) {
+      navigation.x = signal;
+      break;
+    }
+  }
+}
+
+calibrateX();
