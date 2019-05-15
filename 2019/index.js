@@ -112,8 +112,11 @@ function initialize() {
 
 // Challenge #13
 function calibrateX() {
+
   for (let i = 0; i < 12; i++) {
+
     const signal = checkSignal();
+
     if (signal !== undefined) {
       navigation.x = signal;
       break;
@@ -121,30 +124,37 @@ function calibrateX() {
   }
 }
 
-calibrateX();
-
 // Challenge #14
 function calibrateY() {
+
   for (let i = 0; i < 60; i++) {
-  const signal = checkSignal();
-  
-  if (signal !== undefined) {
-    navigation.y = signal;
-    break;
+    
+    const signal = checkSignal();
+    
+    if (signal !== undefined) {
+      navigation.y = signal;
+      break;
+    }
   }
-}
 }
 
 function calibrateZ() {
-for (let i = 0; i < 60; i++) {
-  const signal = checkSignal();
-  
-  if (signal !== undefined) {
-    navigation.z = signal;
-    break;
+
+  for (let i = 0; i < 60; i++) {
+
+    const signal = checkSignal();
+    
+    if (signal !== undefined) {
+      navigation.z = signal;
+      break;
+    }
   }
 }
-}
 
-calibrateY();
-calibrateZ();
+// Challenge #15
+function calibrate() {
+  
+  calibrateX();
+  calibrateY();
+  calibrateZ();
+}
