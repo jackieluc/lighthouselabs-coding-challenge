@@ -139,3 +139,13 @@ Let's write `calibrateY()` and `calibrateZ()`. The manual says you'll need to lo
 "One-step calibration needed," LARRY quacks. The last page of the calibration manual says that for proper calibration, you need to write a function called `calibrate()` which the nav system can call anytime it wants, which will calibrate your X, Y, and Z axes. The good news is, you’ve already done the hard part. Write one function called `calibrate()` which will call your other three functions in it, one after the other.
 
 You don't need call the `calibrate()` function yourself, but don't forget to remove the other calibrateX, calibrateY and calibrateZ calls you already wrote
+
+## Challenge #16
+
+"QUACK propulsion module needs to make us go!" LARRY points his bill at the ship’s command center, where the navigation system speed is set to "raaaaid".
+
+That clearly isn't correct - `speed` needs to be a non-negative integer.
+
+Write a function called `setSpeed(speed)` which will take in a `string` as a parameter, and set the speed in the navigation object (see globals above) to an `integer`.
+
+Luckily the propulsion module lets us know the speed it needs to be set at, so you don't need to call this function yourself

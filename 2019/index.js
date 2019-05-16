@@ -153,8 +153,18 @@ function calibrateZ() {
 
 // Challenge #15
 function calibrate() {
-  
+
   calibrateX();
   calibrateY();
   calibrateZ();
+}
+
+// Challenge #16
+function setSpeed(speed) {
+  
+  let speedAsInt = parseInt(speed);
+  
+  if (speedAsInt >= 0) {
+    navigation.speed = speedAsInt;
+  }
 }
