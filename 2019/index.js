@@ -112,9 +112,7 @@ function initialize() {
 
 // Challenge #13
 function calibrateX() {
-
   for (let i = 0; i < 12; i++) {
-
     const signal = checkSignal();
 
     if (signal !== undefined) {
@@ -126,11 +124,9 @@ function calibrateX() {
 
 // Challenge #14
 function calibrateY() {
-
   for (let i = 0; i < 60; i++) {
-    
     const signal = checkSignal();
-    
+
     if (signal !== undefined) {
       navigation.y = signal;
       break;
@@ -139,11 +135,9 @@ function calibrateY() {
 }
 
 function calibrateZ() {
-
   for (let i = 0; i < 60; i++) {
-
     const signal = checkSignal();
-    
+
     if (signal !== undefined) {
       navigation.z = signal;
       break;
@@ -153,7 +147,6 @@ function calibrateZ() {
 
 // Challenge #15
 function calibrate() {
-
   calibrateX();
   calibrateY();
   calibrateZ();
@@ -161,10 +154,16 @@ function calibrate() {
 
 // Challenge #16
 function setSpeed(speed) {
-  
   let speedAsInt = parseInt(speed);
-  
+
   if (speedAsInt >= 0) {
     navigation.speed = speedAsInt;
   }
 }
+
+// Challenge #17
+function activateAntenna() {
+  ship.antenna.active = true;
+}
+
+activateAntenna();
