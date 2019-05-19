@@ -166,7 +166,7 @@ function activateAntenna() {
   ship.antenna.active = true;
 }
 
-activateAntenna();
+// activateAntenna();
 
 // Challenge #18
 function sendBroadcast() {
@@ -175,4 +175,13 @@ function sendBroadcast() {
   }
 }
 
-sendBroadcast();
+// sendBroadcast();
+
+// Challenge #19
+function configureBroadcast() {
+  setFrequency();
+  activateAntenna();
+  sendBroadcast();
+}
+
+configureBroadcast();
