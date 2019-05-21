@@ -185,3 +185,14 @@ function configureBroadcast() {
 }
 
 configureBroadcast();
+
+// CHallenge #20
+function decodeMessage(message) {
+  return message
+    .replace(new RegExp('0', 'g'), 'o')
+    .replace(new RegExp('1', 'g'), 'i')
+    .replace(new RegExp('2', 'g'), 'u')
+    .replace(new RegExp('3', 'g'), 'e')
+    .replace(new RegExp('4', 'g'), 'a')
+    .replace(new RegExp('5', 'g'), 'y');
+}
