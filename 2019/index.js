@@ -196,3 +196,16 @@ function decodeMessage(message) {
     .replace(new RegExp('4', 'g'), 'a')
     .replace(new RegExp('5', 'g'), 'y');
 }
+
+// Challenge #21
+function returnToEarth() {
+  const xBroadcasted = broadcast('x');
+  const yBroadcasted = broadcast('y');
+  const zBroadcasted = broadcast('z');
+
+  navigation.x = parseInt(decodeMessage(xBroadcasted), 16);
+  navigation.y = parseInt(decodeMessage(yBroadcasted), 16);
+  navigation.z = parseInt(decodeMessage(zBroadcasted), 16);
+}
+
+returnToEarth();
