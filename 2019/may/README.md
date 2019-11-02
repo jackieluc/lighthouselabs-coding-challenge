@@ -1,4 +1,4 @@
-# Lighthouse Labs 21-Day Coding Challenge 2019
+# Lighthouse Labs 21-Day Coding Challenge May 2019
 
 ## Challenge #1
 
