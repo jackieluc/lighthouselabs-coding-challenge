@@ -26,3 +26,15 @@ const interviewAnswer = (topic) => {
       return 'QUACK!';
   }
 };
+
+// Challenge #3
+const castVote = (name, votes) => {
+  
+  // Remember, the possible candidates are: Tim, Sally, and Beth (in that order)
+  const names = ['Tim', 'Sally', 'Beth'];
+  const nameIndex = names.indexOf(name);
+  
+  votes[nameIndex]++;
+  
+  return votes;
+};
