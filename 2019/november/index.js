@@ -38,3 +38,9 @@ const castVote = (name, votes) => {
   
   return votes;
 };
+
+// Challenge #4
+const registerToVote = (name, unregisteredVoters) => {
+  
+  return unregisteredVoters.filter(voter => voter !== name);
+};
