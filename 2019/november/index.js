@@ -44,3 +44,25 @@ const registerToVote = (name, unregisteredVoters) => {
   
   return unregisteredVoters.filter(voter => voter !== name);
 };
+
+// Challenge #5
+const isAppropriate = (station) => {
+  
+  const validVenueTypes = ['school', 'community centre'];
+  const minCapacity = 20;
+  
+  const [_, capacity, venueType] = station;
+  
+  return capacity >= minCapacity && validVenueTypes.includes(venueType);
+};
+
+const chooseStations = (stations) => {
+
+  return stations
+    .filter(isAppropriate)
+    .map(station => {
+
+      const [name] = station;
+      return name;
+    });
+};
