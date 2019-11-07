@@ -56,13 +56,35 @@ const isAppropriate = (station) => {
   return capacity >= minCapacity && validVenueTypes.includes(venueType);
 };
 
+const getNames = station => {
+
+  const [name] = station;
+  return name;
+};
+
 const chooseStations = (stations) => {
 
   return stations
     .filter(isAppropriate)
-    .map(station => {
-
-      const [name] = station;
-      return name;
-    });
+    .map(getNames);
 };
+
+// Challenge #6
+const voterTurnout = (voter_signatures, voter_ids) => {
+
+  if (voter_signatures.length !== voter_ids.length) {
+    return false;
+  }
+  
+  for (let i = 0; i < voter_ids.length; i++) {
+    const voter_id = voter_ids[i];
+    const voter_signature = voter_signatures[i];
+    
+    if (voter_id !== voter_signature) {
+      return 'FRAUD!';
+    }
+  }
+  
+  return 'All clear, we can count the votes!';
+};
+
