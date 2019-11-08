@@ -88,3 +88,21 @@ const voterTurnout = (voter_signatures, voter_ids) => {
   return 'All clear, we can count the votes!';
 };
 
+// Challenge #7
+const termTopics = (interviews) => {
+  
+  const focusTopics = {
+    'smart city': 0,
+    'arts funding': 0,
+    'transportation': 0
+  };
+  
+  interviews.forEach(topic => {
+    
+    if (focusTopics[topic] !== undefined) {
+      focusTopics[topic] += 1;
+    }
+  });
+  
+  return Object.values(focusTopics);
+};
