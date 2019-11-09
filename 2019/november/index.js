@@ -106,3 +106,11 @@ const termTopics = (interviews) => {
   
   return Object.values(focusTopics);
 };
+
+// Challenge #8
+const smartGarbage = (trash, bins) => {
+    
+  bins[trash] += 1;
+  
+  return bins;
+};
