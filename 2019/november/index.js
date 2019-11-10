@@ -125,3 +125,35 @@ const carPassing = (cars, speed) => {
   
   return [...cars, car];
 };
+
+// Challenge #10
+const whereCanIPark = (spots, vehicle) => {
+  
+  const parkingSpotRules = {
+    'R': ['regular', 'small', 'motorcycle'],
+    'S': ['small', 'motorcycle'],
+    'M': ['motorcycle']
+  };
+  
+  let availableSpots = [];
+  
+  for (let y = 0; y < spots.length; y++) {
+    for (let x = 0; x < spots[y].length; x++) {
+      
+      const spot = spots[y][x];
+      
+      if (parkingSpotRules[spot] && parkingSpotRules[spot].includes(vehicle)) {
+        
+        availableSpots.push({ x, y });
+      }
+    }
+  }
+  
+  if (availableSpots.length === 0) {
+    return false;
+  }
+  
+  const { x, y } = availableSpots[0];
+  
+  return [x, y];
+};
