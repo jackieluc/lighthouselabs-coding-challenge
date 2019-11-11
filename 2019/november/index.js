@@ -157,3 +157,17 @@ const whereCanIPark = (spots, vehicle) => {
   
   return [x, y];
 };
+
+// Challenge #11
+const busTimes = buses => {
+  
+  const result = {};
+  
+  Object.entries(buses).forEach(bus => {
+    const [busRoute, busInfo] = bus;
+    
+    result[busRoute] = busInfo.distance / busInfo.speed;
+  });
+  
+  return result;
+};
