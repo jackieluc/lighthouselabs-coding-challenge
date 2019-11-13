@@ -171,3 +171,20 @@ const busTimes = buses => {
   
   return result;
 };
+
+// Challenge #12
+const checkAir = function (samples, threshold) {
+  
+  const airQuality = {
+    clean: 0,
+    dirty: 0
+  };
+  
+  samples.forEach(sample => airQuality[sample] += 1);
+  
+  const { clean, dirty } = airQuality;
+  
+  const airQualityRatio = dirty / (clean + dirty);
+  
+  return airQualityRatio >= threshold ? 'Polluted' : 'Clean';
+}
