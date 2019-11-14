@@ -188,3 +188,16 @@ const checkAir = function (samples, threshold) {
   
   return airQualityRatio >= threshold ? 'Polluted' : 'Clean';
 }
+
+// Challenge #13
+const lightsOn = function(lights) {
+  return lights.map(light => light.on = true);
+};
+
+const lightsOff = function(lights) {
+  return lights.map(light => light.on = false);
+};
+
+const toggleLights = function(lights, lightsAreOn) {
+  return lights.map(light => light.on = !lightsAreOn);
+};
