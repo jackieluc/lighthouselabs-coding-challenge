@@ -151,3 +151,15 @@ The first two functions will receive an array of objects that represent street l
 Our first function, `lightsOn`, must set all of the lights to `on` and then return the array of lights.
 The second function, `lightsOff`, must set all the lights to "off" and then return the array of lights.
 The third function, `toggleLights`, will receive an array of many street lights, as well as a boolean value lightsAreOn which tells you whether or not all the lights are currently on. If `lightsAreOn` is true, your function should turn all of the lights off. If `lightsAreOn` is false, your function should turn all of the lights on.
+
+## Challenge #14 - Ticket to Ride
+
+The local transit system has been too expensive for too long! To encourage more people to use the bus, you are restructuring ticket pricing. From now on, passengers will be charged a dynamic price, which will depend on the number of people on the bus (peak times have higher fare!) and the distance that the passenger travels.
+
+### Instructions
+
+We'll be implementing a function called `dynamicPricing()`, which will return the cost of a particular trip given the number of people on the bus, and the distance traveled by the passenger. This function receives two numbers: `numberOfPeople` and `distanceTraveled`.
+
+The base ticket price is $1. Passengers will be charged $0.25 per kilometer. If there are 30 or more people on the bus, there should be $0.25 added to the total.
+
+The value that your functions returns must be a string, formatted as such: $4.25. Your values must be shown to two decimal points of precision.

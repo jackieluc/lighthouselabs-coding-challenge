@@ -201,3 +201,21 @@ const lightsOff = function(lights) {
 const toggleLights = function(lights, lightsAreOn) {
   return lights.map(light => light.on = !lightsAreOn);
 };
+
+// Challenge #14
+const isCrowded = (numberOfPeople) => numberOfPeople >= 30;
+
+const dynamicPricing = (numberOfPeople, distanceTraveled) => {
+  
+  const baseFare = 1;
+  const rate = 0.25;
+  const peakTax = 0.25;
+  
+  let fare = baseFare + (distanceTraveled * rate);
+  
+  if (isCrowded(numberOfPeople)) {
+    fare += peakTax;
+  }
+  
+  return `$${fare.toFixed(2)}`;
+};
