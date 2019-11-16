@@ -219,3 +219,28 @@ const dynamicPricing = (numberOfPeople, distanceTraveled) => {
   
   return `$${fare.toFixed(2)}`;
 };
+
+// Challenge #15
+const finalPosition = (moves) => {
+  
+  const position = [0,0];
+  
+  moves.forEach(move => {
+    switch(move) {
+      case 'east':
+        position[0] += 1;
+        break;
+      case 'west':
+        position[0] -= 1;
+        break;
+      case 'north':
+        position[1] += 1;
+        break;
+      case 'south':
+        position[1] -= 1;
+        break;
+    }
+  });
+
+  return position;
+};
