@@ -244,3 +244,12 @@ const finalPosition = (moves) => {
 
   return position;
 };
+
+// Challenge #16
+const festivalColours = color1 => {
+  
+  const color2 = 360 - Math.abs((color1 + 150) - 360);
+  const color3 = 360 - Math.abs((color1 + 210) - 360);
+  
+  return [color2, color3].sort();
+};
