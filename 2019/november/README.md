@@ -191,3 +191,13 @@ We'll complete a function `festivalColours()` that calculates the [split complem
 The function will receive an `H(Hue)` value, and must return an array of the values for the two split complementary colours. The smaller number should be the first element, and the larger number should be the second element.
 
 You can take a peek at this [website](https://www.ethangardner.com/articles/2009/03/15/a-math-based-approach-to-color-theory-using-hue-saturation-and-brightness-hsb/#split-complementary) for the formula you'll need to use to calculate the split complementary colours.
+
+## Challenge #17 - We're Rooting For You!
+
+At this year's town festival the Codeville Vegetation Association will be handing out several awards for the best vegetables in a given category. We'll be testing out a new judging system on the best tomatoes to start, which can be judged based on their redness OR their plumpness.
+
+### Instructions
+
+For this challenge, we'll need to implement a function called `judgeVegetable()` that will decide which vegetable is best based on a given judging characteristic. Our function will receive two parameters: a list of veggies(as an array of objects), and a characteristic to judge the veggies by (in the case of a tomato, either redness or plumpness).
+
+Our function must return the name of the person who submitted (`vegetables.submitter`) the vegetable with the highest ranking in the provided category.

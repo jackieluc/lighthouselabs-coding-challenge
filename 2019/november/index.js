@@ -253,3 +253,17 @@ const festivalColours = color1 => {
   
   return [color2, color3].sort();
 };
+
+// Challenge #17
+const judgeVegetable = (vegetables, metric) => {
+  
+  let [bestVegetable] = vegetables;
+  
+  vegetables.forEach(vegetable => {
+    if (vegetable[metric] > bestVegetable[metric]) {
+      bestVegetable = vegetable;
+    }
+  });
+  
+  return bestVegetable.submitter;
+};
