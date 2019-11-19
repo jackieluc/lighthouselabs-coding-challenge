@@ -267,3 +267,36 @@ const judgeVegetable = (vegetables, metric) => {
   
   return bestVegetable.submitter;
 };
+
+// Challenge #18
+const countTickets = (tickets) => {
+  
+  const count = {
+    red: 0,
+    green: 0,
+    blue: 0
+  };
+  
+  tickets.forEach(ticket => count[ticket] += 1);
+  
+  return count;
+};
+
+const bestOdds = (tickets, raffleEntries) => {
+  
+  const counts = countTickets(tickets);
+  
+  let highestChance = 0;
+  let highestChanceColor = 'red';
+
+  Object.keys(raffleEntries).forEach(color => {
+    
+    if (highestChance <= counts[color] / raffleEntries[color]) {
+
+      highestChance = counts[color] / raffleEntries[color];
+      highestChanceColor = color;
+    }
+  });
+  
+  return `You have the best odds of winning the ${highestChanceColor} raffle.`;
+};
