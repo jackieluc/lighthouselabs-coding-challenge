@@ -211,3 +211,28 @@ There are a number of different stands and games at this year's festival where t
 Our first function, `bestOdds()`, will receive two parameters. The first parameter will be an array of strings that are either `red`, `green`, or `blue`, representing the tickets that a particular person has. The second parameter is an object that shows how many entries there currently are for each raffle. By looking at the tickets that the particular person has, your function should return a string that lets the person know which raffle they have the highest chance of winning. The format of the response should be as follows (without the square brackets): `"You have the best odds of winning the [COLOUR] raffle."`
 
 While we could do this all within the `bestOdds()` function, we want to keep our code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), so we will also need to complete a helper function. This helper function `countTickets()` will be called from `within bestOdds()` and receive the array of strings that are either `red`, `green`, or `blue`. The function will count how many of each string there are, and then return an object with the individual counts.
+
+## Challenge #19 - Pumpkin Spice and Everything Nice
+
+This is the Codeville Fall Festival, and nothing says fall more than pumpkin spice. At this year's festival, there will be three ways for the people of Codeville to get their pumpkin spice fix:
+
+1. Pumpkin pie  
+2. Pumpkin spice lattes  
+3. Pumpkin spice macarons  
+
+### Instructions
+
+Each item differs in both cost and the grams of pumpkin spice per serving. To help festival-goers maximize their pumpkin spice consumption, help them determine the maximum amount of pumpkin spice they can ingest with the amount of money they are bringing to the festival.
+
+- A slice of pumpkin pie costs $5 each, and include a whopping 30g of pumpkin spice  
+- Pumpkin spice lattes cost $3 each, and include 15g of pumpkin spice  
+- Pumpkin spice macarons cost $1 each, and include 3g of pumpkin spice  
+
+We need to write a function, `pumpkinSpice(money)` that will take in a number, or how much the festival-goer has to spend on treats, and return an array with the 4 elements as outlined below:
+
+- The first element should represent how many slices of pumpkin pie the client can buy  
+- The second element should represent how many pumpkin spice lattes the client can buy  
+- The third element should represent how many pumpkin spice macarons the client can buy  
+- The fourth element should represent how many grams of pumpkin spice the client will be buying  
+
+Our function should start by calculating how many slices of pumpkin pie we can buy. Then, we'll want to use the remaining money to do the calculations for the lattes, followed lastly by the macarons.

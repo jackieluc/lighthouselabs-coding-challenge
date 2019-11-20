@@ -300,3 +300,35 @@ const bestOdds = (tickets, raffleEntries) => {
   
   return `You have the best odds of winning the ${highestChanceColor} raffle.`;
 };
+
+// Challenge #19
+const pumpkinSpice = money => {
+  
+  const pumpkin = {
+    pie: {
+      price: 5,
+      weight: 30
+    },
+    latte: {
+      price: 3,
+      weight: 15
+    },
+    macaron: {
+      price: 1,
+      weight: 3
+    }
+  };
+  
+  const purchases = [0, 0, 0, 0];
+  
+  Object.keys(pumpkin).forEach((product, index) => {
+    
+    while(money >= pumpkin[product].price) {
+      money -= pumpkin[product].price;
+      purchases[index] += 1;
+      purchases[3] += pumpkin[product].weight;
+    }
+  });
+  
+  return purchases;
+};
