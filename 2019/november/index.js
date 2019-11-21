@@ -332,3 +332,28 @@ const pumpkinSpice = money => {
   
   return purchases;
 };
+
+// Challenge #20
+// Use the value below whenever you need the value of Pi
+const PI = 3.14159;
+
+const sphereVolume = radius => (4/3) * PI * Math.pow(radius, 3);
+
+const coneVolume = (radius, height) => (1/3) * PI * Math.pow(radius, 2) * height;
+
+const prismVolume = (height, width, depth) => height * width * depth;
+
+const totalVolume = function (solids) {
+
+  return solids.reduce((totalVolume, solid) => {
+
+    switch(solid.type) {
+      case 'sphere':
+        return totalVolume += sphereVolume(solid.radius);
+      case 'cone':
+        return totalVolume += coneVolume(solid.radius, solid.height);
+      case 'prism':
+        return totalVolume += prismVolume(solid.height, solid.width, solid.depth);
+    }
+  }, 0);
+};
