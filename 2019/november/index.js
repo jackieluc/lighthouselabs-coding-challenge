@@ -357,3 +357,18 @@ const totalVolume = function (solids) {
     }
   }, 0);
 };
+
+// Challenge #21
+const chooseRecipe = function(bakeryA, bakeryB, recipes) {
+  
+  const [result] = recipes.filter(recipe => {
+    const { ingredients } = recipe;
+
+    const inStock = (bakeryA.includes(ingredients[0]) && bakeryB.includes(ingredients[1]))
+      || (bakeryA.includes(ingredients[1]) && bakeryB.includes(ingredients[0]));
+    
+      return inStock;
+  });
+
+  return result.name;
+};
